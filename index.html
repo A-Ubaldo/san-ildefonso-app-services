@@ -1,1 +1,356 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>San Ildefonso App Services</title><link rel="stylesheet" href="styles.css"></head><body><div class="app"><header class="top"><div class="brand"><div class="logo">SI</div><div><h1>San Ildefonso</h1><small>App Services</small></div></div><div class="search"><input id="search" oninput="filterServices()" placeholder="Search services"><button class="round" onclick="toast('No new notifications')">♧</button></div></header><section class="hero"><h2>Mabuhay!</h2><p>Your digital gateway to local government services, community information, and assistance.</p><a class="btn light" href="profile.html">Create your account →</a></section><main class="content"><div class="title"><h3>What would you like to do?</h3><a href="services.html">View all</a></div><div class="grid"><a class="service" data-search="services government permits records" href="services.html"><div class="ico">🏛</div><span>Services</span></a><a class="service" data-search="citizen guide information" href="citizen-guide.html"><div class="ico">📖</div><span>Citizen Guide</span></a><a class="service" data-search="e services online documents" href="e-services.html"><div class="ico">🌐</div><span>E-Services</span></a><a class="service" data-search="emergency hotline rescue" href="emergency.html"><div class="ico">⚠</div><span>Emergency</span></a><a class="service" data-search="utilities water electricity waste" href="utilities.html"><div class="ico">⚡</div><span>Utilities</span></a><a class="service" data-search="transport traffic routes" href="transport.html"><div class="ico">🚌</div><span>Transport</span></a><a class="service" data-search="business permits market" href="business.html"><div class="ico">📈</div><span>Business</span></a><a class="service" data-search="more services" href="services.html"><div class="ico">＋</div><span>View More</span></a></div><section style="margin-top:22px"><div class="title"><h3>Quick Access</h3></div><div class="cards two"><a class="card" href="permits.html"><h3>📄 Permits & Applications</h3><p>Request local permits and track your application.</p></a><a class="card" href="e-services.html"><h3>💳 Payments</h3><p>View available government payment services.</p></a><a class="card" href="e-services.html"><h3>🩺 Medical Assistance</h3><p>Find information about local assistance programs.</p></a><a class="card" href="utilities.html"><h3>♻ Waste Collection</h3><p>Check collection schedules and announcements.</p></a></div></section><section style="margin-top:18px"><div class="emergency"><div><h3>Need emergency assistance?</h3><p>Access local emergency hotlines quickly.</p></div><a class="btn light" href="emergency.html">Call</a></div></section><section style="margin-top:22px"><div class="title"><h3>San Ildefonso Updates</h3><a href="updates.html">See all</a></div><a class="card" href="updates.html"><h3>📢 Municipal announcements</h3><p>Stay informed about local schedules, programs, and public advisories.</p></a></section></main><nav class="bottom"><a class="nav active" href="index.html"><b>⌂</b>Home</a><a class="nav" href="services.html"><b>▦</b>Services</a><a class="nav" href="updates.html"><b>◉</b>Updates</a><a class="nav" href="profile.html"><b>●</b>Profile</a></nav></div><script src="app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#24123f">
+
+    <title>San Ildefonso App Services</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header class="top">
+
+            <div class="brand">
+
+                <div class="logo">
+                    SI
+                </div>
+
+                <div>
+                    <h1>San Ildefonso</h1>
+                    <small>App Services</small>
+                </div>
+
+            </div>
+
+            <div class="search">
+
+                <input
+                    id="search"
+                    type="search"
+                    placeholder="Search services..."
+                    oninput="filterServices()"
+                >
+
+                <button
+                    class="round"
+                    type="button"
+                    onclick="toast('No new notifications')"
+                >
+                    🔔
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <section class="hero">
+
+            <h2>Mabuhay!</h2>
+
+            <p>
+                Your digital gateway to local government services,
+                community information, and assistance.
+            </p>
+
+            <a
+                class="btn light"
+                href="profile.html"
+            >
+                Create your account →
+            </a>
+
+        </section>
+
+
+        <main class="content">
+
+            <div class="title">
+
+                <h3>
+                    What would you like to do?
+                </h3>
+
+                <a href="services.html">
+                    View all
+                </a>
+
+            </div>
+
+
+            <div class="grid">
+
+                <a
+                    class="service"
+                    data-search="services government permits records"
+                    href="services.html"
+                >
+                    <div class="ico">🏛️</div>
+                    <span>Services</span>
+                </a>
+
+
+                <a
+                    class="service"
+                    data-search="citizen guide information"
+                    href="citizen-guide.html"
+                >
+                    <div class="ico">📖</div>
+                    <span>Citizen Guide</span>
+                </a>
+
+
+                <a
+                    class="service"
+                    data-search="e services online documents"
+                    href="e-services.html"
+                >
+                    <div class="ico">🌐</div>
+                    <span>E-Services</span>
+                </a>
+
+
+                <a
+                    class="service"
+                    data-search="emergency hotline rescue"
+                    href="emergency.html"
+                >
+                    <div class="ico">🚨</div>
+                    <span>Emergency</span>
+                </a>
+
+
+                <a
+                    class="service"
+                    data-search="utilities water electricity waste"
+                    href="utilities.html"
+                >
+                    <div class="ico">⚡</div>
+                    <span>Utilities</span>
+                </a>
+
+
+                <a
+                    class="service"
+                    data-search="transport traffic routes"
+                    href="transport.html"
+                >
+                    <div class="ico">🚌</div>
+                    <span>Transport</span>
+                </a>
+
+
+                <a
+                    class="service"
+                    data-search="business permits market"
+                    href="business.html"
+                >
+                    <div class="ico">📈</div>
+                    <span>Business</span>
+                </a>
+
+
+                <a
+                    class="service"
+                    data-search="more services"
+                    href="services.html"
+                >
+                    <div class="ico">＋</div>
+                    <span>View More</span>
+                </a>
+
+            </div>
+
+
+            <section style="margin-top: 22px;">
+
+                <div class="title">
+
+                    <h3>
+                        Quick Access
+                    </h3>
+
+                </div>
+
+
+                <div class="cards two">
+
+                    <a
+                        class="card"
+                        href="permits.html"
+                    >
+                        <h3>
+                            📄 Permits & Applications
+                        </h3>
+
+                        <p>
+                            Request local permits and track your application.
+                        </p>
+                    </a>
+
+
+                    <a
+                        class="card"
+                        href="e-services.html"
+                    >
+                        <h3>
+                            💳 Payments
+                        </h3>
+
+                        <p>
+                            View available government payment services.
+                        </p>
+                    </a>
+
+
+                    <a
+                        class="card"
+                        href="e-services.html"
+                    >
+                        <h3>
+                            🩺 Medical Assistance
+                        </h3>
+
+                        <p>
+                            Find information about local assistance programs.
+                        </p>
+                    </a>
+
+
+                    <a
+                        class="card"
+                        href="utilities.html"
+                    >
+                        <h3>
+                            ♻️ Waste Collection
+                        </h3>
+
+                        <p>
+                            Check collection schedules and announcements.
+                        </p>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <section style="margin-top: 18px;">
+
+                <div class="emergency">
+
+                    <div>
+
+                        <h3>
+                            Need emergency assistance?
+                        </h3>
+
+                        <p>
+                            Access local emergency hotlines quickly.
+                        </p>
+
+                    </div>
+
+                    <a
+                        class="btn light"
+                        href="emergency.html"
+                    >
+                        Call
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <section style="margin-top: 22px;">
+
+                <div class="title">
+
+                    <h3>
+                        San Ildefonso Updates
+                    </h3>
+
+                    <a href="updates.html">
+                        See all
+                    </a>
+
+                </div>
+
+
+                <a
+                    class="card"
+                    href="updates.html"
+                >
+
+                    <h3>
+                        📢 Municipal announcements
+                    </h3>
+
+                    <p>
+                        Stay informed about local schedules,
+                        programs, and public advisories.
+                    </p>
+
+                </a>
+
+            </section>
+
+        </main>
+
+
+        <nav class="bottom">
+
+            <a
+                class="nav active"
+                href="index.html"
+            >
+                <b>⌂</b>
+                Home
+            </a>
+
+
+            <a
+                class="nav"
+                href="services.html"
+            >
+                <b>▦</b>
+                Services
+            </a>
+
+
+            <a
+                class="nav"
+                href="updates.html"
+            >
+                <b>◉</b>
+                Updates
+            </a>
+
+
+            <a
+                class="nav"
+                href="profile.html"
+            >
+                <b>●</b>
+                Profile
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
