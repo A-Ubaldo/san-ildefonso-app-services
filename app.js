@@ -1,0 +1,3 @@
+function toast(msg){let t=document.getElementById('toast');if(!t){t=document.createElement('div');t.id='toast';t.className='toast';document.body.appendChild(t)}t.textContent=msg;t.classList.add('show');clearTimeout(window.tt);window.tt=setTimeout(()=>t.classList.remove('show'),1800)}
+function submitDemo(form,msg){form.addEventListener('submit',e=>{e.preventDefault();toast(msg);form.reset()})}
+function filterServices(){let q=(document.getElementById('search')?.value||'').toLowerCase();document.querySelectorAll('[data-search]').forEach(x=>x.style.display=!q||x.dataset.search.toLowerCase().includes(q)?'':'none')}
